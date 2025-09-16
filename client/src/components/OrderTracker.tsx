@@ -31,11 +31,6 @@ export default function OrderTracker({
 }: OrderTrackerProps) {
   const currentStatusIndex = orderStatuses.findIndex(status => status.key === currentStatus);
 
-  const getStatusVariant = (index: number) => {
-    if (index < currentStatusIndex) return 'default'; // completed
-    if (index === currentStatusIndex) return 'secondary'; // current
-    return 'outline'; // pending
-  };
 
   const getStatusColor = (index: number) => {
     if (index < currentStatusIndex) return 'text-green-600';
@@ -114,13 +109,13 @@ export default function OrderTracker({
                   </div>
 
                   {isCompleted && (
-                    <Badge variant="outline" size="sm" className="text-green-600 border-green-600">
+                    <Badge variant="outline" className="text-green-600 border-green-600 text-xs px-2 py-0.5">
                       Complete
                     </Badge>
                   )}
                   
                   {isCurrent && (
-                    <Badge variant="secondary" size="sm">
+                    <Badge variant="secondary" className="text-xs px-2 py-0.5">
                       In Progress
                     </Badge>
                   )}
