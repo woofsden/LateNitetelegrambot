@@ -1,0 +1,160 @@
+
+Build a mobile-first eCommerce and delivery web application for LateNiteLube, optimized for smartphones and tablets (90%+ of visitors will be mobile users). The system must also be easily convertible into native iOS and Android apps for app store distribution, retaining full ordering functionality.
+
+⸻
+
+Business Context
+
+LateNiteLube has launched as an owner/operator delivery service in Palm Springs, California.
+	•	Initial delivery zone: 10-mile radius from ZIP code 92264.
+	•	Future expansion must support multiple delivery zones/locations.
+
+⸻
+
+Core Requirements
+
+1. Products & Inventory
+	•	Initial product catalog (4 SKUs):
+	•	2oz LateNiteLube Silicone-Based Personal Lubricant – $19.99
+	•	2-Pack (2oz) – $29.99
+	•	4oz LateNiteLube Silicone-Based Personal Lubricant – $29.99
+	•	2-Pack (4oz) – $39.99
+	•	Built-in inventory management system with low-stock alerts.
+	•	Admin dashboard to add/manage new products, prices, and stock.
+
+⸻
+
+2. Customer Accounts & Checkout
+	•	Require account creation to order.
+	•	Phone number authentication with OTP (one-time passcode) via SMS.
+	•	Signup collects:
+	•	First & last name
+	•	Auto-filled verified phone number
+	•	Home/billing address
+	•	Age confirmation (18+ or 21+ depending on jurisdiction)
+	•	Property type (Home, Apartment, Townhome, Hotel, Business/Office) with tailored fields (unit number, gate code, hotel desk vs room delivery, etc.)
+	•	Age-gate popup when visiting site; must check a box to confirm eligibility before signup.
+	•	Legal opt-in checkbox covering:
+	•	Age requirement (18+/21+)
+	•	SMS consent with disclaimer (“Msg & data rates may apply”)
+	•	Ownership of account/phone number.
+
+⸻
+
+3. Geo-Location & Delivery Zones
+	•	Use geo-location to verify customer is in the active delivery area before allowing checkout.
+	•	Launch delivery zone: 10-mile radius from ZIP 92264.
+	•	Must be scalable to support additional delivery zones in future.
+
+⸻
+
+4. Orders & Notifications
+	•	Real-time order status updates via SMS (and push notifications for native apps):
+	•	Order Received, Order Confirmed, Preparing Order, Ready – Awaiting Driver, Picked Up, Driver Arriving Soon, Driver Arrived, Delivered, Cancelled.
+	•	Customer profile allows viewing and printing order history.
+
+⸻
+
+5. Payments
+	•	Integrate with Stripe as primary processor.
+	•	Accept Apple Pay, Google Wallet, Samsung Pay, and Cash App.
+	•	Support gift card balances (cannot be used for tips).
+	•	Add driver tip option at checkout (100% goes to driver).
+	•	All displayed prices must include taxes and delivery.
+
+⸻
+
+6. AI Chatbot & Support
+	•	Advanced AI chatbot with the ability to:
+	•	Answer product and order questions.
+	•	Modify items in cart.
+	•	Issue refunds for cancelled orders.
+	•	Escalate to a live representative.
+	•	Create support tickets for delivery/product issues.
+	•	Resolve complaints where possible.
+	•	Chatbot should improve over time and use latest AI integrations.
+	•	Customer support portal includes:
+	•	Contact Us form (dedicated page).
+	•	Knowledge base/FAQ.
+	•	Ticket tracking in customer account.
+
+⸻
+
+7. Referral, Loyalty, & Promotions
+	•	Built-in referral/loyalty program:
+	•	Track referrals with unique customer links.
+	•	Offer store credits or discounts for referrals.
+	•	Points/rewards system for repeat orders (redeemable on future purchases).
+	•	Promo/coupon system (e.g., first-order discount).
+	•	Ability to send e-gift cards by SMS (trackable in profile).
+
+⸻
+
+8. Customer Profile Portal
+	•	Manage delivery addresses (add/update/delete).
+	•	Store property-specific delivery details (apartment gate codes, hotel delivery rules, etc.).
+	•	Update payment methods.
+	•	Update password.
+	•	Access referral link and loyalty points.
+	•	View gift card balances and transaction history.
+
+⸻
+
+9. Driver/Delivery System (Scalable)
+	•	Future-ready driver portal/app extension with:
+	•	Order acceptance/decline.
+	•	Status updates (picked up, on route, delivered).
+	•	GPS-based ETA tracking for customers.
+	•	Driver rating system after delivery.
+
+⸻
+
+10. Content & SEO
+	•	Blog or resources section for SEO (e.g., product guides, FAQs).
+	•	Product pages with detailed descriptions, usage instructions, and customer reviews/ratings (with moderation).
+	•	Homepage designed with banners for promotions, featured products, and referral program highlights.
+
+⸻
+
+11. Legal & Compliance
+	•	Age verification popup on entry.
+	•	Disclaimer listing states/territories requiring 21+.
+	•	Terms of Service, Privacy Policy, Refund Policy, and Cookie Consent Banner (GDPR/CCPA).
+	•	SMS opt-in flow compliant with TCPA and carrier guidelines (confirmation reply required).
+	•	Explicit disclaimers for: “Adult use only,” “18+/21+ compliance,” “Not for resale.”
+	•	Compliance with all federal and state consumer protection laws.
+
+⸻
+
+12. Security
+	•	Customer data encrypted with strongest available hashing and encryption methods.
+	•	Encrypt passwords and phone numbers (no plain text storage).
+	•	Multi-layer, multi-personnel, multi-factor authentication for admin access.
+	•	Eliminate any single-point-of-failure security risks.
+	•	Allow customers to delete their account/data (privacy compliance).
+
+⸻
+
+Sample Disclaimer Texts to Implement
+
+Age Verification Popup:
+“You must be at least 18 years old to enter. In the following states and territories, you must be 21 years old: [list states/territories requiring 21+]. By clicking ‘I Confirm’ you certify that you meet the age requirement and agree to our Terms of Service and Privacy Policy.”
+
+SMS Opt-in Disclaimer:
+“By entering your phone number and continuing, you consent to receive SMS messages regarding your orders and promotional updates from LateNiteLube. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. You confirm that you are the owner of this phone number. Consent is not required for purchase.”
+
+Refund Policy (for site page):
+“Refunds are issued only for orders that are cancelled before delivery or for defective/damaged products. Refunds may be processed directly through our AI support system or by contacting customer support.”
+
+⸻
+
+Summary
+
+The system must be:
+	•	Mobile-first (fast, app-like experience on web).
+	•	Scalable (future delivery zones, drivers, products).
+	•	Secure (bank-level encryption, multi-layer access).
+	•	Conversion-focused (reviews, promotions, referral program).
+	•	Compliant (age verification, SMS disclaimers, legal policies).
+	•	AI-powered (chatbot with refunds, escalations, cart adjustments).
+	•	App-ready (push notifications, GPS tracking, app store requirements).
