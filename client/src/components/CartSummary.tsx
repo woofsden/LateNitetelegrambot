@@ -17,8 +17,6 @@ interface CartSummaryProps {
   onUpdateQuantity: (id: string, quantity: number) => void;
   onRemoveItem: (id: string) => void;
   onCheckout: () => void;
-  deliveryFee?: number;
-  tax?: number;
 }
 
 export default function CartSummary({ 
@@ -26,12 +24,9 @@ export default function CartSummary({
   onUpdateQuantity, 
   onRemoveItem, 
   onCheckout,
-  deliveryFee = 4.99,
-  tax = 0
 }: CartSummaryProps) {
   const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const calculatedTax = subtotal * 0.095; // 9.5% tax
-  const total = subtotal + deliveryFee + calculatedTax;
+  const total = subtotal;
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
 
   if (items.length === 0) {
@@ -125,12 +120,6 @@ export default function CartSummary({
             <span data-testid="text-subtotal">${subtotal.toFixed(2)}</span>
           </div>
           <div className="flex justify-between">
-            <span>Delivery Fee</span>
-            <span data-testid="text-delivery-fee">${deliveryFee.toFixed(2)}</span>
-          </div>
-          <div className="flex justify-between">
-            <span>Tax (9.5%)</span>
-            <span data-testid="text-tax">${calculatedTax.toFixed(2)}</span>
           </div>
           <Separator />
           <div className="flex justify-between font-medium text-base">

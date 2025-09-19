@@ -53,8 +53,8 @@ export default function MobileHeader({
 
         {/* Brand Banner */}
         <div className="bg-primary text-primary-foreground text-center py-2 px-4 rounded-md">
-          <p className="text-sm font-medium">Fast & Discreet Delivery</p>
-          <p className="text-xs opacity-90">Open Late • Delivery Until 2 AM</p>
+          <p className="text-sm font-medium">Fast & Discreet Delivery 24/7</p>
+          <p className="text-xs opacity-90">Serving the Palm Springs, California Area</p>
         </div>
       </div>
     </header>

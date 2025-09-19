@@ -30,7 +30,7 @@ export default function ShopPage() {
     },
     {
       id: "2",
-      name: "2-Pack (2oz) LateNiteLube",
+      name: "2-Pack(2oz) LNL Silicone-Based Personal Lubricant",
       price: 29.99,
       originalPrice: 39.98,
       image: product2ozPack,
@@ -47,8 +47,8 @@ export default function ShopPage() {
     },
     {
       id: "4",
-      name: "2-Pack (4oz) LateNiteLube",
-      price: 39.99,
+      name: "2-Pack(4oz) LNL Silicone-Based Personal Lubricant",
+      price: 49.99,
       originalPrice: 59.98,
       image: product4ozPack,
       inStock: true,
